@@ -21,17 +21,17 @@ def createTopo():
 		topo.addSwitch("a" + str(x))
 		
 	#Create links
-	topo.addLink("c1","d1",bw=10000, delay='2ms')
-	topo.addLink("c1","d2",bw=10000, delay='2ms')
+	topo.addLink("c1","d1",bw=1000, delay='2ms')
+	topo.addLink("c1","d2",bw=1000, delay='2ms')
 
 	for x in range(1,3):
-		topo.addLink("d"+str(x),"a"+str(2*x-1),bw=1000,delay='2ms')
-		topo.addLink("d"+str(x),"a"+str(2*x),bw=1000,delay='2ms')
+		topo.addLink("d"+str(x),"a"+str(2*x-1),bw=100,delay='2ms')
+		topo.addLink("d"+str(x),"a"+str(2*x),bw=100,delay='2ms')
 
 	
 	for x in range(1,5):
-		topo.addLink("a"+str(x),"h"+str(2*x-1),bw=100,delay='2ms')
-		topo.addLink("a"+str(x),"h"+str(2*x),bw=100,delay='2ms')
+		topo.addLink("a"+str(x),"h"+str(2*x-1),bw=10,delay='2ms')
+		topo.addLink("a"+str(x),"h"+str(2*x),bw=10,delay='2ms')
 	return topo
 
 def startNetwork():
